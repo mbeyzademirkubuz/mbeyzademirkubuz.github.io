@@ -22,3 +22,11 @@ table, tr, td{
 body{
     background-image: url("../images/background.jpg");
 }
+
+img {
+    display: block; /* Resmi blok öğesi olarak ayarlar */
+    margin: auto; /* Resmi yatay olarak ortalar */
+    max-width: 100%; /* Resmi sınırlı bir genişlikte tutar */
+    height: auto; /* Resmin oranlarını korur */
+    object-fit: cover; /* Resmi kesmeden tam olarak sığdırır */
+  }
