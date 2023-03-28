@@ -1,75 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html leng="en">
     <head>
-
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Beyza Mürüvvet Demirkubuz</title>
+        <title>Beyza Demirkubuz Kişisel Websitesi</title>
+
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
         <link rel="stylesheet" href="css/style.css">
-        
-
-        <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
     </head>
+
     <body>
-        <h1>Beyza Mürüvvet Demirkubuz Portfolio</h1>
-        <p>Ben Mürüvvet Demirkubuz, 2019 yılında Okan Üniversitesi'nde bilgisayar mühendisliği okumaya başladım. <br> 
-            Daha sonra Marmara Üniversitesi'ne geçtim ve şu anda üçüncü sınıf öğrencisiyim. <br>
-            Lisede biyoloji alanında Tübitak Konya Bölge finallerine yaptığım bir proje ile katıldım ve iki kez TEKNOFEST'e katılma fırsatı elde ettim. <br>
-            Web alanında projeler geliştiriyorum ve şu anda Flutter eğitimi alıyorum. Bu alanda projeler gerçekleştirmek istiyorum. <br>
-            Sosyal medya ile de ilgileniyorum ve yönettiğim hesaplar üzerinde aktif olarak içerik üretiyorum. Sosyal medya üzerine bir eğitim de aldım. <br>
-            Öğrenmeyi ve bu öğrendiklerimi başka insanlarla paylaşmayı seviyorum. Konuşkan bir yapım olmakla beraber, bir ekip yönetmeyi, bir olayı planlamayı severek yapıyorum. Bu konuda bir yeteneğim olduğunu düşünüyorum. </p>
-        <div style="display: flex;">
-            <div style="flex: 1;">
-              <img src="images/ff.png" alt="fotoğraf 1" style="width: 100%;">
-              <h2>Project 1</h2>
-              <p>Bu proje, veritabanı dersi için gerçekleştirilmiştir. <br> 
-                PHP kullanılarak yapılan bu projede HTML de kullanılmıştır. <br>
-                Detaylı inceleme için Github'a göz atabilirsiniz. <br></p>
-                
-                    <a href="https://github.com/mbeyzademirkubuz/Ne-Yesem--Website" class="btn" style="text-align: center;">Read More</a>
-           
-                
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+
+            <i class='bx bx-menu' id="menu-icon"></i>
+
+
+            <nav class="navbar">
+                <a href="#home" class="active">Ana Sayfa</a>
+                <a href="#about">Hakkında</a>
+                <a href="#services">Projeler</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Home Section-->
+
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Merhaba, Ben</h3>
+                <h1>Beyza Mürüvvet Demirkubuz</h1>
+                <h3><span class="multiple-text"></span></h3>
+                <p>In 2019, I registered at Istanbul Okan University with a 100% scholarship. After completing the preparatory and first year at Okan University, I transferred to Marmara University in 2021 and
+                    I am sophomore computer engineering.
+                    I am interested in embedded systems, coding fields.</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/beyzademirkubuzzz/"><i class='bx bxl-instagram' ></i></a>
+                        <a href="https://twitter.com/fortheallroses"><i class='bx bxl-twitter' ></i></a>
+                        <a href="https://www.linkedin.com/in/mbeyzademirkubuz/"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="https://github.com/mbeyzademirkubuz"><i class='bx bxl-github' ></i></a>
+                    </div>
+
+                    
+
+                    <a href="files/cv.pdf" download class="btn">CV'yi İndir</a>
+            </div>
+            <div class="home-img">
+                <img src="images/profilp.png" alt="" style="width: 500; height: 600;">
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="images/profilp.png" alt="">
             </div>
 
-            <div style="margin-left: 100px; margin-right: 20px; flex: 1;">
-              <img src="images/ff.png" alt="fotoğraf 2" style="width: 100%;">
-              <h2>Project 2</h2>
-              <p>Bu proje, python dersi için gerçekleştirilmiştir. <br>
-                Her gün kullanıcılarla kısa bir anket yapılarak duygu durumu analiz edilir. <br>
-                Bu duygu analizi sonucunda bir playlist önerisi yapılır. <br>
-                Detaylı inceleme için Github'a göz atabilirsiniz.</p>
-                <a href="https://github.com/mbeyzademirkubuz/Moodlist" class="btn">Read More</a>
+            <div class="about-content">
+                <h2 class="heading"><span>Magnolia Coder </span>Hakkında</h2>
+                <h3>Web Programcı</h3>
+                <p>I am doing projects on web programming. At the same time, I take Flutter training and develop myself for projects. I write books in my spare time. There are four books that I have written. I love playing volleyball, table tennis and chess.</p>
+                <a href="#" class="btn">Read More</a>
             </div>
-          </div>
-          
-          <footer>
-            <div class="container">
-              <div class="row">
-              
-                <div class="col-md-6">
-                  <h3>Beni Takip Edin</h3>
-                  <div class="social-media">
-                    <a href="https://www.instagram.com/beyzademirkubuzzz/"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://twitter.com/fortheallroses"><i class='bx bxl-twitter' ></i></a>
-                    <a href="https://www.linkedin.com/in/mbeyzademirkubuz/"><i class='bx bxl-linkedin' ></i></a>
-                    <a href="https://github.com/mbeyzademirkubuz"><i class='bx bxl-github' ></i></a>
+        </section>
+
+        <!-- Service Section-->
+
+        <section class="services" id="services">
+            <h2 class="heading">Gerçekleştirilen <span>Projeler</span></h2>
+            <div class="services-container">
+                <div class="services-box">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Web Development</h3>
+                    <p>I have been interested in web programming for two years. The projects realized in this field are interesting and I want to develop projects myself. I am doing my current projects in web programming.</p>
+                    <a href="#" class="btn">Read More</a>
                 </div>
-                </div>
-              </div>
+
+            <div class="services-box">
+                <i class='bx bxl-flutter' ></i>
+                <h3>Flutter Project</h3>
+                    <p>I have been interested in mobile application Development for a few months. The projects realized in this field are interesting and I want to develop projects myself. You can see more about that. </p>
+                    <a href="#" class="btn">Read More</a>
             </div>
-          </footer>
+
+            <div class="services-box">
+                <i class='bx bx-podcast' ></i>
+                <h3>Podcasts</h3>
+                <p>I have been interested in recording podcasts for a few months. It has been an enjoyable hobby for me. I will continue to take records for both authoring and engineering.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section-->
+
+        <section class="portfolio" id="portfolio">
+            <h2 class="heading">Son <span>Blog Yazıları</span></h2>
+
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="images/box.png" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Blog</h4>
+                        <p>In 2019, I registered at Istanbul Okan University with a 100% scholarship. After completing the preparatory and first year atOkan University, I transferred to Marmara University in 2021 and
+                            I am sophomore computer engineering.
+                            I am interested in embedded systems, coding fields.</p>
+                        <a href="#"><i class='bx bx-link-alt' ></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="images/box.png" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Blog</h4>
+                        <p>In 2019, I registered at Istanbul Okan University with a 100% scholarship. After completing the preparatory and first year atOkan University, I transferred to Marmara University in 2021 and
+                            I am sophomore computer engineering.
+                            I am interested in embedded systems, coding fields.</p>
+                        <a href="#"><i class='bx bx-link-alt' ></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="images/box.png" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Blog</h4>
+                        <p>In 2019, I registered at Istanbul Okan University with a 100% scholarship. After completing the preparatory and first year atOkan University, I transferred to Marmara University in 2021 and
+                            I am sophomore computer engineering.
+                            I am interested in embedded systems, coding fields.</p>
+                        <a href="#"><i class='bx bx-link-alt' ></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="images/box.png" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Blog</h4>
+                        <p>In 2019, I registered at Istanbul Okan University with a 100% scholarship. After completing the preparatory and first year atOkan University, I transferred to Marmara University in 2021 and
+                            I am sophomore computer engineering.
+                            I am interested in embedded systems, coding fields.</p>
+                        <a href="#"><i class='bx bx-link-alt' ></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="images/box.png" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Blog</h4>
+                        <p>In 2019, I registered at Istanbul Okan University with a 100% scholarship. After completing the preparatory and first year atOkan University, I transferred to Marmara University in 2021 and
+                            I am sophomore computer engineering.
+                            I am interested in embedded systems, coding fields.</p>
+                        <a href="#"><i class='bx bx-link-alt' ></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section-->
+
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me!</span></h2>
+
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Adress">
+                </div>
+
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number">
+                    <input type="text" placeholder="Email Subject">
+                </div>
+
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your message..."></textarea>
+
+                <input type="submit" value="Send Message" class="btn">
+
+               
+            </form>
+
+        </section>
+
+        <!-- FOOTER Section-->
+            <footer class="footer">
+                <div class="footer-text">
+                    <p>Copyright &copy; 2023 by MagnoliaCoder | All Rights Reverved.</p>
+                </div>
+
+                <div class="footer-iconTop">
+                    <a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
+                </div>
+            </footer>
+
+
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+
+        <script src="js/script.js"></script>
     </body>
-
-
 
 </html>
