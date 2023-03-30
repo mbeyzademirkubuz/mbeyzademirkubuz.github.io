@@ -68,6 +68,7 @@ function renameAndDownload() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    alert("CV indirildi.");
 
     var element = document.getElementById("fileid");
     element.style.color = "white";
