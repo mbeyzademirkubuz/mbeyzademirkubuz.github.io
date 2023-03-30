@@ -49,11 +49,30 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin:'right' });
 
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Web Developer', 'Writer', 'Content Creator'],
+    strings: ['Web Developer', 'Author', 'Content Creator'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
     loop: true
 
 
-})
+});
+
+function renameAndDownload() {
+    var filepath = 'file/cv.pdf';
+    var defaultFilename = filepath.split('/').pop();
+    var filename = document.getElementById('filename-input').value || defaultFilename;
+    var link = document.createElement('a');
+    link.href = filepath;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    var element = document.getElementById("fileid");
+    element.style.color = "white";
+    element.innerText = "Dosya yeni adıyla indirildi.";
+  };
+
+
+
