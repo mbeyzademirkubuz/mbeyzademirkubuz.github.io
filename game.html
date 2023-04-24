@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+    <title>Fruit Collector Game</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+        #game-board {
+            width: 1000;
+            height: 500px;
+            border: 8px solid black;
+            position: relative;
+            background-color:  aliceblue;;
+            border-style:double;
+        }
+        .fruit {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            border-radius: 90%;
+            border: 1px solid black;
+        }
+        .player {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: rgb(170, 15, 100);
+            border-radius: 90%;
+            box-shadow: 0 0 1rem black;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.5rem; font-size:40px; text-align: center; color:rgb(170, 15, 100); color-scheme:unset;">PUNNET GAME</h1>
+    <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:30px; text-align: center; color: aliceblue;">Tıkla ve meyveleri yok et!</p>
+    <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:30px; text-align: center; color:rgb(170, 15, 100);">Count: <strong><span id="fruit-count">0</span></strong></p>
+
+    <div id="game-board">
+        <div class="player"></div>
+    </div>
+
+    <script>
+        // Add your JavaScript code here
+        let fruitCount = 0;
+let fruitImages = ["images/ananas.jpg", "images/cilek.jpg", "images/karpuz.jpg", "images/kiraz.jpg" , "images/kivi.jpg", "images/mango.jpg", "images/mango.jpg", "images/nar.jpg"];
+let player = document.querySelector(".player");
+let playerX = 0;
+let playerY = 0;
+
+function addFruit() {
+    let fruit = document.createElement("img");
+    let fruitIndex = Math.floor(Math.random() * fruitImages.length);
+    fruit.src = fruitImages[fruitIndex];
+    fruit.classList.add("fruit");
+    fruit.style.top = Math.random() * 300 + "px";
+    fruit.style.left = Math.random() * 1400 + "px";
+    fruit.addEventListener("click", collectFruit);
+    document.querySelector("#game-board").appendChild(fruit);
+}
+
+function resetGame() {
+  fruitCount = 0;
+  document.querySelectorAll('.fruit').forEach(function(fruit) {
+    fruit.remove();
+  });
+  for (let i = 0; i < 40; i++) {
+    addFruit();
+  }
+}
+
+function collectFruit(event) {
+    event.target.remove();
+    fruitCount++;
+    document.querySelector("#fruit-count").textContent = fruitCount;
+    if (fruitCount === 20) {
+        alert("20 meyve topladın!\nBravo!");
+        resetGame();
+    }
+}
+
+function movePlayer(event) {
+    // yön tuşlarını kontrol et
+    if (event.keyCode === 37) { // sol
+        playerX -= 10;
+    } else if (event.keyCode === 38) { // yukarı
+        playerY -= 10;
+    } else if (event.keyCode === 39) { // sağ
+        playerX += 10;
+    } else if (event.keyCode === 40) { // aşağı
+        playerY += 10;
+    }
+    
+    // oyuncuyu hareket ettir
+    player.style.left = playerX + "px";
+    player.style.top = playerY + "px";
+    
+    // meyveleri yok et
+    let fruits = document.querySelectorAll(".fruit");
+    for (let i = 0; i < fruits.length; i++) {
+        let fruit = fruits[i];
+        if (isColliding(player, fruit)) {
+            collectFruit({ target: fruit });
+        }
+    }
+}
+
+// oyuncu ve meyve çarpışmasını kontrol et
+function isColliding(player, fruit) {
+    let playerRect = player.getBoundingClientRect();
+    let fruitRect = fruit.getBoundingClientRect();
+    return (
+        playerRect.left < fruitRect.right &&
+        playerRect.right > fruitRect.left &&
+        playerRect.top < fruitRect.bottom &&
+        playerRect.bottom > fruitRect.top
+    );
+}
+
+document.addEventListener("keydown", movePlayer);
+
+for (let i = 0; i < 40; i++) {
+    addFruit();
+}
+
+    </script>
+</body>
+</html>
+
+
+
